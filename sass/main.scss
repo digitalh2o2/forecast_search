@@ -1,0 +1,27 @@
+/*
+  ======================================
+  Main Section
+  ======================================
+*/
+
+html {
+  background: #ff6e7f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ff6e7f , #bfe9ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ff6e7f , #bfe9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
+  font-size: 3em;
+  color: white;
+}
+
+.input-field {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  ======================================
+  Main Body
+  ======================================
+*/
