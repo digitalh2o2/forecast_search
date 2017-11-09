@@ -20,10 +20,12 @@
     <div class="container input-field">
       <div class="field has-addons">
         <div class="control">
-          <input class="input" type="text" placeholder="Search by City or Zip Code">
+          <input class="input" type="text" list="cities" placeholder="Search by City or Zip Code">
+          <datalist id="cities">
+          </datalist>
         </div>
         <div class="control">
-          <a class="button is-info">
+          <a class="button is-primary">
             Search
           </a>
         </div>
