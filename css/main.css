@@ -18,6 +18,10 @@ html {
 .input-field {
   display: flex;
   justify-content: center; }
+  .input-field ul {
+    background-color: white; }
+    .input-field ul li {
+      text-decoration: none; }
 
 /*
   ======================================

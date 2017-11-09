@@ -18,7 +18,16 @@ html {
 .input-field {
   display: flex;
   justify-content: center;
+
+  ul {
+    background-color: white;
+
+    li {
+      text-decoration: none;
+    }
+  }
 }
+
 
 /*
   ======================================
