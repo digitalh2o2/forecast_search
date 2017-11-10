@@ -78,32 +78,50 @@ function getWeather(city){
     .then(function(response){
       // store response in cityData variable
       let cityData = response.current_observation;
+      console.log(cityData);
       // we grab the current time and extract the hours
       let hr = cityData.local_time_rfc822.split(" ")[4].split(":")[0];
-
+      let dayTime = (hr > 6 && hr <= 19);
+      // store the description for current weather to use within object
       let weatherIcon = cityData.icon
-      console.log(cityData);
-
       // switch statement to verify current conditions and use custom images to display to user.
-      switch(weatherIcon){
-        case 'cloudy':
-          weatherIcon = './images/cloudy.png';
-          break;
-        case 'clear':
-          // if statement to see whether it is daytime or night time in users search.
-          if(hr > 6 && hr <= 19){
-            weatherIcon = "./images/sunnyclear.png"
-          } else {
-            weatherIcon = './images/clear.png'
-          }
-          break;
+
+      let getIcon = {
+        'cloudy': './images/cloudy.png',
+        'partlycloudy': dayTime ? './images/daypartlycloudy.png' : './images/nightpartlycloudy.png',
+        'mostlycloudy': dayTime ? './images/daypartlycloudy.png' : './images/nightpartlycloudy.png',
+        'clear': dayTime ? './images/sunnyclear.png' : './images/clear.png',
+        'sunny': './images/sunnyclear.png',
+        'mostlysunny': './images/sunnyclear.png',
+        'partlysunny': './images/daypartlycloudy.png',
+        'sleet': './images/sleet.png',
+        'rain': './images/rainy.png',
+        'snow': './images/snow.png',
+        'tstorms': './images/storms.png',
+        'unknown': './images/unknown.png',
+        'flurries': './images/flurries.png',
+        'fog': './images/fog.png',
+        'hazy': './images/fog.png'
       }
+      // switch(weatherIcon){
+      //   case 'cloudy':
+      //     weatherIcon = './images/cloudy.png';
+      //     break;
+      //   case 'clear':
+      //     // if statement to see whether it is daytime or night time in users search.
+      //     if(hr > 6 && hr <= 19){
+      //       weatherIcon = "./images/sunnyclear.png"
+      //     } else {
+      //       weatherIcon = './images/clear.png'
+      //     }
+      //     break;
+      // }
       cityInfo.innerHTML = `
         <div class="container cityInfo">
           <h1 class="subtitle">${cityData.display_location.full}</h1>
 
-          <img src="${weatherIcon}" alt="${cityData.icon}">
-          <h3>${cityData.icon}</h3>
+          <img src="${getIcon[weatherIcon]}" alt="${cityData.icon}">
+          <h3>${cityData.weather}</h3>
 
           <h3>Current Temperature ${cityData.temperature_string}</h3>
           <h3>Feels like: ${cityData.feelslike_string}</h3>
