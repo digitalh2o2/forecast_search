@@ -3,17 +3,20 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Weather Forecast</title>
   </head>
-  <body>
+  <body class="site">
   <!-- Main Section -->
-  <section class="hero">
+  <section class="hero site-content is-mobile">
 
-    <div class="hero-body">
+    <div class="hero-body is-mobile">
       <div class="container has-text-centered">
-        <h1 class="title">Weather Forecast</h1>
+        <h1 class="title">Current Weather</h1>
       </div>
     </div>
 
@@ -35,9 +38,19 @@
   </section>
 
   <!-- Results Section -->
-  <section class="results has-text-centered">
-    
+  <section class="results site-content has-text-centered is-mobile">
   </section>
+
+  <!-- Footer -->
+  <footer class="footer is-mobile">
+    <div class="container">
+      <div class="content has-text-centered">
+          <p class="subtitle">Designed by Saul Ocampo /// <a href="http://food2fork.com/about/api" target="_blank">API provided by Weather Underground</a></p>
+          <a href="https://github.com/digitalh2o2" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/digitalh2ocode" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="main.js"></script>
   </body>

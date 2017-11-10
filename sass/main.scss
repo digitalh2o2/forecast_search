@@ -1,5 +1,22 @@
 /*
   ======================================
+  Entire Page
+  ======================================
+*/
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+
+/*
+  ======================================
   Main Section
   ======================================
 */
@@ -9,6 +26,7 @@ html {
   background: -webkit-linear-gradient(to left, #ff6e7f , #bfe9ff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #ff6e7f , #bfe9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 .title {
   font-size: 3em;
@@ -38,8 +56,48 @@ html {
 */
 
 .cityInfo {
-  
-  border: 2px solid gray;
-  border-radius: 5px;
-  width: 500px;
+  padding-top: 25px;
+  color: white;
+
+  h1 {
+    color: white;
+    font-size: 3em;
+  }
+
+  .wi {
+
+    font-size: 2em;
+    color: white;
+  }
+
+}
+
+/*
+  ======================================
+  Footer
+  ======================================
+*/
+
+.footer {
+  background: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .subtitle {
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+      color: darken(white, 10%);
+    }
+  }
+
 }

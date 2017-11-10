@@ -1,5 +1,18 @@
 /*
   ======================================
+  Entire Page
+  ======================================
+*/
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.site-content {
+  flex: 1; }
+
+/*
+  ======================================
   Main Section
   ======================================
 */
@@ -31,8 +44,34 @@ html {
   ======================================
 */
 .cityInfo {
-  border: 2px solid gray;
-  border-radius: 5px;
-  width: 500px; }
+  padding-top: 25px;
+  color: white; }
+  .cityInfo h1 {
+    color: white;
+    font-size: 3em; }
+  .cityInfo .wi {
+    font-size: 2em;
+    color: white; }
+
+/*
+  ======================================
+  Footer
+  ======================================
+*/
+.footer {
+  background: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .footer .subtitle {
+    color: white; }
+  .footer a {
+    text-decoration: none;
+    color: white; }
+    .footer a:hover {
+      color: #e6e6e6; }
 
 /*# sourceMappingURL=main.css.map */

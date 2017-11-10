@@ -85,8 +85,10 @@ function getWeather(city){
       // store the description for current weather to use within object
       let weatherIcon = cityData.icon
       // switch statement to verify current conditions and use custom images to display to user.
+      const wind = cityData.wind_dir.toLowerCase();
+      console.log(wind);
 
-      let getIcon = {
+      const getIcon = {
         'cloudy': './images/cloudy.png',
         'partlycloudy': dayTime ? './images/daypartlycloudy.png' : './images/nightpartlycloudy.png',
         'mostlycloudy': dayTime ? './images/daypartlycloudy.png' : './images/nightpartlycloudy.png',
@@ -103,28 +105,18 @@ function getWeather(city){
         'fog': './images/fog.png',
         'hazy': './images/fog.png'
       }
-      // switch(weatherIcon){
-      //   case 'cloudy':
-      //     weatherIcon = './images/cloudy.png';
-      //     break;
-      //   case 'clear':
-      //     // if statement to see whether it is daytime or night time in users search.
-      //     if(hr > 6 && hr <= 19){
-      //       weatherIcon = "./images/sunnyclear.png"
-      //     } else {
-      //       weatherIcon = './images/clear.png'
-      //     }
-      //     break;
-      // }
+
       cityInfo.innerHTML = `
-        <div class="container cityInfo">
+        <div class="container cityInfo is-mobile">
           <h1 class="subtitle">${cityData.display_location.full}</h1>
 
           <img src="${getIcon[weatherIcon]}" alt="${cityData.icon}">
           <h3>${cityData.weather}</h3>
 
-          <h3>Current Temperature ${cityData.temperature_string}</h3>
+          <h3>Current Temperature: ${cityData.temperature_string}</h3>
           <h3>Feels like: ${cityData.feelslike_string}</h3>
+          <h3>Wind Direction From ${cityData.wind_dir}</h3>
+          <i class="wi wi-wind wi-from-${wind}"></i>
         </div>
       `
       console.log(cityData);
