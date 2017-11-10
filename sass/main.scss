@@ -21,6 +21,8 @@ html {
 
   ul {
     background-color: white;
+    z-index: 3;
+    position: absolute;
 
     li {
       text-decoration: none;
@@ -31,6 +33,13 @@ html {
 
 /*
   ======================================
-  Main Body
+  Results
   ======================================
 */
+
+.cityInfo {
+  
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 500px;
+}

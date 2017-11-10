@@ -19,14 +19,20 @@ html {
   display: flex;
   justify-content: center; }
   .input-field ul {
-    background-color: white; }
+    background-color: white;
+    z-index: 3;
+    position: absolute; }
     .input-field ul li {
       text-decoration: none; }
 
 /*
   ======================================
-  Main Body
+  Results
   ======================================
 */
+.cityInfo {
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 500px; }
 
 /*# sourceMappingURL=main.css.map */
