@@ -119,7 +119,6 @@ function getWeather(city){
           <i class="wi wi-wind wi-from-${wind}"></i>
         </div>
       `
-      console.log(cityData);
     })
     .catch(function(err){
       console.log(err)

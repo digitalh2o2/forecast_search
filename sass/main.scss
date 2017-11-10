@@ -56,20 +56,24 @@ html {
 */
 
 .cityInfo {
-  padding-top: 25px;
-  color: white;
+
+  h1,
+  h3,
+  .wi {
+    color: #5777a2;
+  }
 
   h1 {
-    color: white;
-    font-size: 3em;
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
   }
 
   .wi {
-
     font-size: 2em;
-    color: white;
   }
-
 }
 
 /*
@@ -80,9 +84,7 @@ html {
 
 .footer {
   background: none;
-  position: relative;
   text-align: center;
-  width: 100%;
   left: 0;
   right: 0;
   bottom: 0;

@@ -43,15 +43,16 @@ html {
   Results
   ======================================
 */
-.cityInfo {
-  padding-top: 25px;
-  color: white; }
-  .cityInfo h1 {
-    color: white;
-    font-size: 3em; }
-  .cityInfo .wi {
-    font-size: 2em;
-    color: white; }
+.cityInfo h1,
+.cityInfo h3,
+.cityInfo .wi {
+  color: #5777a2; }
+.cityInfo h1 {
+  font-size: 2.5em; }
+.cityInfo h3 {
+  font-size: 1.25em; }
+.cityInfo .wi {
+  font-size: 2em; }
 
 /*
   ======================================
@@ -60,9 +61,7 @@ html {
 */
 .footer {
   background: none;
-  position: relative;
   text-align: center;
-  width: 100%;
   left: 0;
   right: 0;
   bottom: 0; }
