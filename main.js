@@ -1,10 +1,13 @@
-console.log("hi from console")
+console.log("Hi from console")
 // Original search query by user
 const userSearch = "http://autocomplete.wunderground.com/aq?query=";
 
+// Cors proxy header for initial search
+const proxyURL = 'https://cors-anywhere.herokuapp.com/';
+
 // Various document selectors
 const userInput = document.querySelector('.input');
-let cityOptions = document.querySelector('#cities');
+const cityOptions = document.querySelector('#cities');
 const cityInfo = document.querySelector('.results');
 
 // Event listener as the user types
@@ -14,15 +17,9 @@ userInput.addEventListener('keyup',function(e){
   }
 })
 
-
 // Event listener when user 'clicks' on option
 cityOptions.addEventListener('click',function(e){
   userInput.value = e.target.textContent;
-
-  console.log(e.target.attributes["0"].value)
-  if(userInput.value.length > 3){
-
-  }
   getWeather(e.target.attributes["0"].value);
   cityOptions.innerHTML = ""
 })
@@ -33,8 +30,9 @@ cityOptions.addEventListener('click',function(e){
 function getLocation(){
   // Get current value within the input field
   const locationSearch = userInput.value;
+  const userURl = userSearch + locationSearch;
   // Fetch the location Promise through the API
-  let locationPromise = fetch(userSearch + locationSearch);
+  let locationPromise = fetch(proxyURL + userURl);
 
   locationPromise
   .then(function(response){
