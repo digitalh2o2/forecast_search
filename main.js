@@ -68,7 +68,7 @@ function getLocation(){
 
 function getWeather(city){
   // grab promise from api after user clicks on their search results.
-  let cityPromise = fetch("http://api.wunderground.com/api/8035f0a54e790f36/conditions/q/zmw:" + city + ".json");
+  let cityPromise = fetch("https://api.wunderground.com/api/8035f0a54e790f36/conditions/q/zmw:" + city + ".json");
 
   cityPromise
   .then(function(response){
